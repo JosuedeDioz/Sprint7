@@ -15,4 +15,7 @@ if hist_button: # al hacer clic en el botón
   # mostrar un gráfico Plotly interactivo
      st.plotly_chart(fig, use_container_width=True)
 
+car_data = pd.read_csv('vehicles_us.csv') # leer los datos
+fig = px.histogram(car_data, x="odometer") # crear un histograma
+fig.show() # crear gráfico de dispersión
 
